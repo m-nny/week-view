@@ -1,0 +1,14 @@
+
+.calendar-header {
+  height: 100%;
+  border-top: 1px solid #b7b7b7;
+  border-bottom: 1px solid #b7b7b7;
+  background-color: #f7f7f7;
+  color: #6b6b6b;
+}
+
+.calendar-header__column {
+  height: 100%;
+  display: inline-block;
+  border-right: 1px solid #b7b7b7;
+}

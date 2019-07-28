@@ -1,0 +1,6 @@
+.calendar-body {
+  position: relative;
+  display: table;
+  table-layout: fixed;
+  min-width: 100%;
+}

@@ -1,8 +1,11 @@
 import moment, {Moment} from 'moment';
 
-export interface IEvent {
+export interface IInterval {
   start: Moment;
   end: Moment;
+}
+
+export interface IEvent extends IInterval {
   title: string;
 }
 

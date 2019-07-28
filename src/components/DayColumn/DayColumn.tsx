@@ -3,11 +3,11 @@ import { block } from 'bem-cn';
 
 import './DayColumn.css';
 import DayCell from '../DayCell/DayCell';
-import { IEvent } from '../../models/Event';
+import { IInterval } from '../../models/Event';
 
 type Props = {
   cellHeight: number,
-  dayIntervals: IEvent[],
+  dayIntervals: IInterval[],
 };
 
 const b = block('day-column');
