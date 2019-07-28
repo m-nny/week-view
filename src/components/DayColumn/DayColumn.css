@@ -1,0 +1,11 @@
+
+.day-column {
+  display: table-cell;
+  border-right: 1px solid #b7b7b7;
+  min-width: 100px;
+}
+
+.day-column__cell {
+  background-color: #fff;
+  border-bottom: 1px solid #b7b7b7;
+}

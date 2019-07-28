@@ -2062,6 +2062,11 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
+"@types/bem-cn@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@types/bem-cn/-/bem-cn-2.1.1.tgz#2dfca53ce30fcb9bf1e27f911962152abf06d9d6"
+  integrity sha512-t6nrpz5at+Slh7kgkQIzBZv//No30QxFfKhfA0rzGSAJ3T4wMEmksY33g3e0vicpsxefYtdUeQ53aIggbIh8Ig==
+
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@types/istanbul-lib-coverage/-/istanbul-lib-coverage-2.0.1.tgz#42995b446db9a48a11a07ec083499a860e9138ff"
@@ -3228,6 +3233,11 @@ bcrypt-pbkdf@^1.0.0:
   integrity sha1-pDAdOJtqQ/m2f/PKEaP2Y342Dp4=
   dependencies:
     tweetnacl "^0.14.3"
+
+bem-cn@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/bem-cn/-/bem-cn-3.0.1.tgz#6c9e8d45d422d64f89dec16f9abd3af7fac6690b"
+  integrity sha512-kWC76a09vSk6cJXDYsH1erjxdBf856HTxl0IHOvYItSmBC6wQCsRCf9bmKR0hmeUDcUP5XPMr8MNXDgKbKJi0A==
 
 big.js@^5.2.2:
   version "5.2.2"

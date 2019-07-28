@@ -7,6 +7,7 @@
     "@types/node": "12.6.8",
     "@types/react": "16.8.23",
     "@types/react-dom": "16.8.5",
+    "bem-cn": "^3.0.1",
     "moment": "^2.24.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -41,6 +42,7 @@
     "@storybook/addon-links": "^5.1.9",
     "@storybook/addons": "^5.1.9",
     "@storybook/react": "^5.1.9",
+    "@types/bem-cn": "^2.1.1",
     "@types/storybook__addon-storyshots": "^4.0.2",
     "@types/storybook__react": "^4.0.2",
     "babel-loader": "8.0.5"

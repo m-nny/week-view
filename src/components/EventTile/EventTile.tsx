@@ -1,5 +1,8 @@
 import * as React from 'react';
-import { IEvent } from '../models/Event';
+
+import './EventTile.css';
+
+import { IEvent } from '../../models/Event';
 
 type Props = {
   event: IEvent
