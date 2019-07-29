@@ -5,8 +5,7 @@ export function getEveryHourInterval(day = moment()): IInterval[] {
   return Array(24).fill(null).map((_, hour) => {
     const start = moment(day)
       .hour(hour)
-      .minute(0)
-      .second(0);
+      .startOf('hour')
     return {
       start,
       end: moment(start).add(1, 'h')

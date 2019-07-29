@@ -8,7 +8,7 @@ const dayIntervals = getEveryHourInterval();
 
 const props = {
   cellHeight: 32,
-  scaleIntervals: dayIntervals,
+  rulerIntervals: dayIntervals,
 };
 
 storiesOf('CalendarBody', module)

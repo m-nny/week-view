@@ -10,12 +10,12 @@ import { IInterval } from '../../models/Event';
 type Props = {
   firstDay: moment.Moment,
   cellHeight: number,
-  scaleIntervals: IInterval[],
+  rulerIntervals: IInterval[],
 };
 
 const b = block('calendar-body');
 
-const CalendarBody: React.FC<Props> = ({ firstDay, cellHeight, scaleIntervals }) => {
+const CalendarBody: React.FC<Props> = ({ firstDay, cellHeight, rulerIntervals: scaleIntervals }) => {
   const columns = [];
   for (let i = 0; i < 7; i++) {
     const day = moment(firstDay).add(i, 'd');
