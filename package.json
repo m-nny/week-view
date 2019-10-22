@@ -38,12 +38,12 @@
     ]
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^5.1.9",
-    "@storybook/addon-links": "^5.1.9",
-    "@storybook/addons": "^5.1.9",
-    "@storybook/react": "^5.1.9",
+    "@storybook/addon-actions": "^5.2.5",
+    "@storybook/addon-links": "^5.2.5",
+    "@storybook/addons": "^5.2.5",
+    "@storybook/react": "^5.2.5",
     "@types/bem-cn": "^2.1.1",
-    "@types/storybook__addon-storyshots": "^4.0.2",
+    "@types/storybook__addon-storyshots": "^5.1.1",
     "@types/storybook__react": "^4.0.2",
     "babel-loader": "8.0.5"
   }

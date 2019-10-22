@@ -40,9 +40,4 @@ const CalendarHeader: React.FC<Props> = ({ firstDay, columnDimentions, dayFormat
   );
 };
 
-type CellProps = {
-  date: moment.Moment,
-  dayFormat: string,
-};
-
 export default CalendarHeader;

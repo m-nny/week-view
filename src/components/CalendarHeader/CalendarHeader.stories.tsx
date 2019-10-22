@@ -6,7 +6,7 @@ import CalendarHeader from './CalendarHeader';
 import { getEveryHourInterval } from '../../Utils';
 import { rulerFormat } from '../CalendarRuler/CalendarRuler.stories';
 
-const dayIntervals = getEveryHourInterval();
+// const dayIntervals = getEveryHourInterval();
 
 const props = {
   firstDay: moment('2019-01-07'), // First Monday
