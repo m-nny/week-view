@@ -22,25 +22,25 @@ const b = block('calendar');
 
 const Calendar: React.FC<Props> = ({ firstDay, dayFormat, columnDimentions, cellHeight, ...props }) => {
   const rulerIntervals = getEveryHourInterval();
-  const [scrollPosition, setScrollPosition] = React.useState({top: 0, left: 0});
+  const [scrollPosition, setScrollPosition] = React.useState({ top: 0, left: 0 });
   return (
     <div className={b()}>
       <div className={b('corner')}>{props.cornerTitle}</div>
-      <div className={b('header')} style={{left: -scrollPosition.left}}>
+      <div className={b('header')} style={{ left: -scrollPosition.left }}>
         <CalendarHeader
           firstDay={firstDay}
           dayFormat={dayFormat}
           columnDimentions={columnDimentions}
         />
       </div>
-      <div className={b('ruler')} style={{top: -scrollPosition.top}}>
+      <div className={b('ruler')} style={{ top: -scrollPosition.top }}>
         <CalendarRuler
           rulerIntervals={rulerIntervals}
           rulerFormat={props.rulerFormat}
           cellHeight={cellHeight}
         />
       </div>
-      <div className={b('content')} onScroll={({target}) => {setScrollPosition({top: target.scrollTop, left: target.scrollLeft})}}>
+      <div className={b('content')} onScroll={({ target }: any) => setScrollPosition({ top: target.scrollTop, left: target.scrollLeft })}>
         <CalendarBody
           firstDay={firstDay}
           rulerIntervals={rulerIntervals}
