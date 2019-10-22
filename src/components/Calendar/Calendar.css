@@ -4,7 +4,7 @@
   --header-font-size: 16px;
   --ruler-width: 125px;
   --border-color: #b7b7b7;
-  --calendar-max-height: 600px;
+  --calendar-max-height: 500px;
 }
 
 .calendar {
@@ -43,7 +43,7 @@
   line-height: var(--header-height);
   z-index: 10;
   top: 0;
-  /* padding-left: var(--ruler-width); */
+  padding-left: var(--ruler-width);
   text-align: center;
   font-size: var(--header-font-size);
   font-weight: bold;
@@ -53,7 +53,7 @@
   position: absolute;
   z-index: 9;
   left: 0;
-  /* padding-top: var(--header-height); */
+  padding-top: var(--header-height);
   width: var(--ruler-width);
   border-right: 1px solid var(--border-color);
   border-left: 1px solid var(--border-color);
