@@ -11,15 +11,14 @@ import { getEveryHourInterval } from '../../Utils';
 
 type Props = {
   firstDay: momemt.Moment,
-  columnDimentions: number[],
   cellHeight: number,
-  rulerFormat: string,
   cornerTitle: string,
 };
 
 const b = block('calendar');
+const columnNumber = 7;
 
-const Calendar: React.FC<Props> = ({ firstDay, columnDimentions, cellHeight, ...props }) => {
+const Calendar: React.FC<Props> = ({ firstDay,  cellHeight, ...props }) => {
   const rulerIntervals = getEveryHourInterval();
   const [scrollPosition, setScrollPosition] = React.useState({ top: 0, left: 0 });
   return (
@@ -28,13 +27,12 @@ const Calendar: React.FC<Props> = ({ firstDay, columnDimentions, cellHeight, ...
       <div className={b('header')} style={{ left: -scrollPosition.left }}>
         <CalendarHeader
           firstDay={firstDay}
-          columnNumber={columnDimentions.length}
+          columnNumber={columnNumber}
         />
       </div>
       <div className={b('ruler')} style={{ top: -scrollPosition.top }}>
         <CalendarRuler
           rulerIntervals={rulerIntervals}
-          rulerFormat={props.rulerFormat}
           cellHeight={cellHeight}
         />
       </div>
@@ -43,6 +41,7 @@ const Calendar: React.FC<Props> = ({ firstDay, columnDimentions, cellHeight, ...
           firstDay={firstDay}
           rulerIntervals={rulerIntervals}
           cellHeight={cellHeight}
+          columnNumber={columnNumber}
         />
       </div>
     </div>

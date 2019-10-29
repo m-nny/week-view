@@ -6,10 +6,8 @@ import { getEveryHourInterval } from '../../Utils';
 
 const dayIntervals = getEveryHourInterval();
 
-export const rulerFormat = 'HH:mm';
 const props = {
   cellHeight: 32,
-  rulerFormat,
 };
 
 storiesOf('CalendarRuler', module)

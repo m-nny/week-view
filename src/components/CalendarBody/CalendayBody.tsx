@@ -11,15 +11,16 @@ type Props = {
   firstDay: moment.Moment,
   cellHeight: number,
   rulerIntervals: IInterval[],
+  columnNumber: number,
 };
 
 const b = block('calendar-body');
 
-const CalendarBody: React.FC<Props> = ({ firstDay, cellHeight, rulerIntervals: scaleIntervals }) => {
+const CalendarBody: React.FC<Props> = ({ firstDay, cellHeight, rulerIntervals, columnNumber }) => {
   const columns = [];
-  for (let i = 0; i < 7; i++) {
+  for (let i = 0; i < columnNumber; i++) {
     const day = moment(firstDay).add(i, 'd');
-    const intervals = getDayIntervals(day, scaleIntervals);
+    const intervals = getDayIntervals(day, rulerIntervals);
     columns.push(
       <DayColumn
         key={i}
