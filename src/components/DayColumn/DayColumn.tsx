@@ -12,12 +12,12 @@ type Props = {
 
 const b = block('day-column');
 
-const DayColumn: React.FC<Props> = ({cellHeight, dayIntervals}) => {
+const DayColumn: React.FC<Props> = ({ cellHeight, dayIntervals }) => {
   const dayCells = dayIntervals.map((interval, rowPos) => (
     <div
       key={rowPos}
       className={b('cell')}
-      style={{height: cellHeight}}
+      style={{ height: cellHeight }}
     >
       <DayCell
       />

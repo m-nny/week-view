@@ -1,18 +1,8 @@
 
 .event-tile {
-  display: flex;
-  align-items: center;
   background-color: #86B6F9;
+  width: 100%;
   padding: 8px;
   border-radius: 8px;
-}
-
-.event-tile-time {
-  font-weight: 100;
-  font-size: .7em;
-}
-
-.event-tile-title {
-  font-weight: 400;
-  font-size: 1em;
+  font-size: 13px;
 }

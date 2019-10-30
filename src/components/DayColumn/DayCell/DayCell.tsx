@@ -12,7 +12,7 @@ const b = block('day-cell');
 const DayCell: React.FC<Props> = () => {
   return (
     <div className={b()}>
-     &nbsp;
+      &nbsp;
     </div>
   );
 };
