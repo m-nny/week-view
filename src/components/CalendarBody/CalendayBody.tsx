@@ -32,9 +32,7 @@ const CalendarBody: React.FC<Props> = ({ firstDay, cellHeight, rulerIntervals, c
 
   return (
     <div className={b()}>
-      <div className={b('row')}>
-        {columns}
-      </div>
+      {columns}
     </div>
   );
 };

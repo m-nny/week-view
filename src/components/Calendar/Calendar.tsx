@@ -18,7 +18,7 @@ type Props = {
 const b = block('calendar');
 const columnNumber = 7;
 
-const Calendar: React.FC<Props> = ({ firstDay,  cellHeight, ...props }) => {
+const Calendar: React.FC<Props> = ({ firstDay, cellHeight, ...props }) => {
   const rulerIntervals = getEveryHourInterval();
   const [scrollPosition, setScrollPosition] = React.useState({ top: 0, left: 0 });
   return (

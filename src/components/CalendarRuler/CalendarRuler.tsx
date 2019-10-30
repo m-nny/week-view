@@ -17,7 +17,7 @@ const rulerFormat = 'HH:mm';
 const CalendarRuler: React.FC<Props> = ({ rulerIntervals: scaleIntervals, cellHeight }) => {
   const cells = scaleIntervals.map((interval, idx) => (
     <div key={idx} className={b('cell')} style={{ height: cellHeight, lineHeight: `${cellHeight}px` }}>
-      <span>{interval.start.format(rulerFormat)}</span>
+      {interval.start.format(rulerFormat)}
     </div>
   ));
   return (
