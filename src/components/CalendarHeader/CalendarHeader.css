@@ -5,9 +5,11 @@
   border-bottom: 1px solid #b7b7b7;
   background-color: #f7f7f7;
   color: #6b6b6b;
+  white-space: nowrap;
 }
 
 .calendar-header__column {
+  width: 100px;
   height: 100%;
   display: inline-block;
   border-right: 1px solid #b7b7b7;
