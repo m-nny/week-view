@@ -6,7 +6,7 @@ import Calendar from './Calendar';
 
 const props = {
   firstDay: moment().day('monday'), // First Monday
-  cellHeight: 25,
+  cellHeight: 50,
   cornerTitle: 'corner',
 };
 
