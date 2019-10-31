@@ -8,7 +8,7 @@ import { multipleEvents } from '../EventTile/EventTile.stories';
 const props = {
   firstDay: moment().day('monday'), // First Monday
   cellHeight: 50,
-  events: multipleEvents
+  events: multipleEvents,
 };
 
 storiesOf('Calendar', module)

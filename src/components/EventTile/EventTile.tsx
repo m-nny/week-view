@@ -1,13 +1,12 @@
 import * as React from 'react';
+import block from 'bem-cn';
 
 import './EventTile.css';
 
-import { IEvent } from '../../models/Event';
-import block from 'bem-cn';
+import { IEventWithPosition } from '../../models/Event';
 
 type Props = {
-  event: IEvent
-  style?: any
+  event: IEventWithPosition
 };
 
 const b = block('event-tile');

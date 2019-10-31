@@ -5,6 +5,7 @@ import './DayColumn.css';
 import DayCell from './DayCell/DayCell';
 import { IInterval, IEvent } from '../../models/Event';
 import EventTile from '../EventTile/EventTile';
+import { calculatePosition } from '../../Utils';
 
 type Props = {
   cellHeight: number,
@@ -15,6 +16,7 @@ type Props = {
 const b = block('day-column');
 
 const DayColumn: React.FC<Props> = ({ cellHeight, dayIntervals, events }) => {
+  const eventsWithPostiions = calculatePosition(cellHeight, events);
   const dayCells = dayIntervals.map((interval, rowPos) => (
     <div
       key={rowPos}
@@ -29,7 +31,7 @@ const DayColumn: React.FC<Props> = ({ cellHeight, dayIntervals, events }) => {
   return (
     <div className={b()}>
       {dayCells}
-      {events.map(e => <EventTile key={e.title} event={e} />)}
+      {eventsWithPostiions.map(e => <EventTile key={e.title} event={e} />)}
     </div>
   );
 };
