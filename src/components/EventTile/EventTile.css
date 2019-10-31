@@ -1,8 +1,11 @@
 
 .event-tile {
+  box-sizing: border-box;
   background-color: #86B6F9;
+  position: absolute;
   width: 100%;
-  padding: 8px;
+  padding: 4px 8px;
   border-radius: 8px;
   font-size: 13px;
+  color: black;
 }

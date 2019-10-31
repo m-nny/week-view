@@ -3,13 +3,9 @@ import { block } from 'bem-cn';
 
 import './DayCell.css';
 
-type Props = {
-
-};
-
 const b = block('day-cell');
 
-const DayCell: React.FC<Props> = () => {
+const DayCell: React.FC = () => {
   return (
     <div className={b()}>
       &nbsp;

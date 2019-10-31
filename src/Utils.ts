@@ -1,5 +1,5 @@
 import moment from 'moment';
-import { IInterval } from './models/Event';
+import { IInterval, IEvent, IEventWithPosition } from './models/Event';
 
 export function getEveryHourInterval(day = moment()): IInterval[] {
   return Array(24).fill(null).map((_, hour) => {
@@ -28,4 +28,16 @@ export function getDayIntervals(day: string | moment.Moment, scaleIntervals: IIn
       end
     }
   });
+}
+
+export function calculatePosition(cellHeight: number, events: IEvent[]): IEventWithPosition[] {
+  return events
+    .map((event) => ({
+      ...event,
+      style: {
+        top: event.start.hour() * cellHeight,
+        height: event.duration * cellHeight,
+      },
+    }))
+    .sort((a, b) => (a.start.diff(b.start)));
 }
