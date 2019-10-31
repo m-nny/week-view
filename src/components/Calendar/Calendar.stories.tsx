@@ -3,11 +3,12 @@ import { storiesOf } from '@storybook/react';
 import moment from 'moment';
 
 import Calendar from './Calendar';
+import { multipleEvents } from '../EventTile/EventTile.stories';
 
 const props = {
   firstDay: moment().day('monday'), // First Monday
   cellHeight: 50,
-  cornerTitle: 'corner',
+  events: multipleEvents
 };
 
 storiesOf('Calendar', module)

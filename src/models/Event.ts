@@ -1,18 +1,25 @@
-import moment, {Moment} from 'moment';
+import moment, { Moment } from 'moment';
 
 export interface IInterval {
-  start: Moment;
-  end: Moment;
+  start: Moment
+  end: Moment
 }
 
-export interface IEvent extends IInterval {
+export interface IEvent {
   title: string;
+  start: Moment
+  duration: number // in hours
+  style?: {
+    top: number
+    height: number
+  }
+  weekday?: number
 }
 
-export function createEvent(title: string, start: string | Moment, duration_min: number, unit: 'h' | 'm' = 'm'): IEvent {
+export function createEvent(title: string, start: string | Moment, duration_min: number): IEvent {
   return {
     title,
     start: moment(start),
-    end: moment(start).add(duration_min, unit)
+    duration: duration_min
   }
 }

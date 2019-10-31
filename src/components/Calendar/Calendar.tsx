@@ -7,23 +7,24 @@ import './Calendar.css';
 import CalendarHeader from '../CalendarHeader/CalendarHeader';
 import CalendarRuler from '../CalendarRuler/CalendarRuler';
 import CalendarBody from '../CalendarBody/CalendayBody';
+import { IEvent } from '../../models/Event';
 import { getEveryHourInterval } from '../../Utils';
 
 type Props = {
   firstDay: momemt.Moment,
   cellHeight: number,
-  cornerTitle: string,
+  events: IEvent[],
 };
 
 const b = block('calendar');
 const columnNumber = 7;
 
-const Calendar: React.FC<Props> = ({ firstDay, cellHeight, ...props }) => {
+const Calendar: React.FC<Props> = ({ firstDay, cellHeight, events }) => {
   const rulerIntervals = getEveryHourInterval();
   const [scrollPosition, setScrollPosition] = React.useState({ top: 0, left: 0 });
   return (
     <div className={b()}>
-      <div className={b('corner')}>{props.cornerTitle}</div>
+      <div className={b('corner')}>{}</div>
       <div className={b('header')} style={{ left: -scrollPosition.left }}>
         <CalendarHeader
           firstDay={firstDay}
@@ -42,6 +43,7 @@ const Calendar: React.FC<Props> = ({ firstDay, cellHeight, ...props }) => {
           rulerIntervals={rulerIntervals}
           cellHeight={cellHeight}
           columnNumber={columnNumber}
+          events={events}
         />
       </div>
     </div>

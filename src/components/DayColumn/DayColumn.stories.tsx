@@ -1,16 +1,18 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { getEveryHourInterval } from '../../Utils';
 import DayColumn from './DayColumn';
-
-const props = {
-  cellHeight: 32,
-};
+import { getEveryHourInterval, calculatePosition } from '../../Utils';
+import { shortEvent } from '../EventTile/EventTile.stories';
 
 const dayIntervals = getEveryHourInterval();
+const events = calculatePosition(32, [shortEvent]);
+const props = {
+  cellHeight: 32,
+  dayIntervals,
+  events,
+};
+
 
 storiesOf('DayColumn', module)
-  .add('one event', () => <DayColumn {...props} dayIntervals={dayIntervals.slice(0, 1)} />)
-  .add('two events', () => <DayColumn {...props} dayIntervals={dayIntervals.slice(0, 2)} />)
-  .add('whole day', () => <DayColumn {...props} dayIntervals={dayIntervals} />)
+  .add('whole day with event', () => <DayColumn {...props} />)
